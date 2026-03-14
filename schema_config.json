@@ -1,0 +1,134 @@
+{
+    "olist_customers_dataset": {
+        "primary_keys": [
+            "customer_id"
+        ],
+        "not_null_columns": [
+            "customer_id",
+            "customer_unique_id"
+        ],
+        "numeric":[
+            "customer_zip_code_prefix"
+        ],
+        "no_data":[
+            "customer_city",
+            "customer_state"
+        ],
+        "date":[]
+    },
+    "olist_order_items_dataset": {
+        "primary_keys": [
+            "order_id"
+        ],
+        "not_null_columns": [
+            "order_id",
+            "product_id",
+            "seller_id",
+            "order_item_id"
+        ],
+        "numeric":[
+            "price",
+            "freight_value"
+        ],
+        "no_data":[],
+        "date":[
+            "shipping_limit_date"
+        ]
+    },
+    "olist_order_payments_dataset": {
+        "primary_keys": [
+            "order_id"
+        ],
+        "not_null_columns": [
+            "order_id"
+        ],
+        "numeric":[
+            "payment_sequential",
+            "payment_installments",
+            "payment_value"
+        ],
+        "no_data":[
+            "payment_type"
+        ],
+        "date":[]
+
+    },
+    "olist_order_reviews_dataset": {
+        "primary_keys": [
+            "review_id"
+        ],
+        "not_null_columns": [
+            "review_id",
+            "order_id"
+        ],
+        "numeric":[
+            "review_score"
+        ],
+        "no_data":[
+            "review_comment_title",
+            "review_comment_message"
+        ],
+        "date":[
+            "review_creation_date",
+            "review_answer_timestamp"
+        ]
+    },
+    "olist_orders_dataset": {
+        "primary_keys": [
+            "order_id"
+        ],
+        "not_null_columns": [
+            "customer_id",
+            "order_id"
+        ],
+        "numeric":[],
+        "no_data":[
+            "order_status"
+        ],
+        "date":[
+            "order_purchase_timestamp",
+            "order_approved_at",
+            "order_delivered_carrier_date",
+            "order_delivered_customer_date",
+            "order_estimated_delivery_date"
+        ]
+    },
+    "olist_products_dataset": {
+        "primary_keys": [
+            "product_id"
+        ],
+        "not_null_columns": [
+            "product_id"
+        ],
+        "numeric":[
+            "product_name_lenght",
+            "product_description_lenght",
+            "product_photos_qty",
+            "product_weight_g",
+            "product_length_cm",
+            "product_height_cm",
+            "product_width_cm"
+        ],
+        "no_data":[
+            "product_category_name"
+        ],
+        "date":[]
+        
+    },
+    "olist_sellers_dataset": {
+        "primary_keys": [
+            "seller_id"
+        ],
+        "not_null_columns": [
+            "seller_id"
+        ],
+        "numeric":[
+            "seller_zip_code_prefix"
+        ],
+        "no_data":[
+            "seller_city",
+            "seller_state"
+        ],
+        "date":[]
+    }
+}
